@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DiscountRequest;
 use App\Http\Requests\UserRequest;
-use App\Http\Services\DiscountService;
+use App\Http\Services\Discount\DiscountService;
 use App\Http\Services\UserService;
 use Illuminate\Http\JsonResponse;
 
