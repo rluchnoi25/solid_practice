@@ -1,1 +1,1 @@
-Practicing SOLID principles
+Practicing SOLID principles (check pull requests)
