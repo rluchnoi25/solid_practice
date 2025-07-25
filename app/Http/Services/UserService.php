@@ -3,12 +3,12 @@
 namespace App\Http\Services;
 
 use App\Models\User;
-use App\Repositories\Eloquent\UserRepository;
+use App\Repositories\Contracts\UserRepositorySaveInterface;
 
 class UserService 
 {
     public function __construct(
-        private UserRepository $userRepository,
+        private UserRepositorySaveInterface $userRepository,
     ) { 
     }
 
