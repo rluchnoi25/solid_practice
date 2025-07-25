@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Eloquent;
 
 use App\Models\User;
+use App\Repositories\Contracts\UserRepositorySaveInterface;
+use Error;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository 
+class UserRepository implements UserRepositorySaveInterface
 {
     public function save(array $data): User
     {
