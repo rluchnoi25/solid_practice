@@ -3,11 +3,11 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\User;
-use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Repositories\Contracts\UserRepositorySaveInterface;
 use Error;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository implements UserRepositoryInterface
+class UserRepository implements UserRepositorySaveInterface
 {
     public function save(array $data): User
     {
@@ -18,15 +18,5 @@ class UserRepository implements UserRepositoryInterface
         ]);
 
         return $user;
-    }
-
-    public function update(array $data)
-    {
-        throw new Error('No need for update now.');
-    }
-
-    public function delete(int $id)
-    {
-        throw new Error('No need for delete now.');
     }
 }

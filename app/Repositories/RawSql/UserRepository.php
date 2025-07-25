@@ -3,11 +3,13 @@
 namespace App\Repositories\RawSql;
 
 use App\Models\User;
-use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Repositories\Contracts\UserRepositoryDeleteInterface;
+use App\Repositories\Contracts\UserRepositorySaveInterface;
+use App\Repositories\Contracts\UserRepositoryUpdateInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository implements UserRepositoryInterface
+class UserRepository implements UserRepositorySaveInterface, UserRepositoryUpdateInterface, UserRepositoryDeleteInterface
 {
     public function save(array $data): User
     {
