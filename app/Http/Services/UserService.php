@@ -3,7 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\User;
-use App\Repositories\UserRepository;
+use App\Repositories\Eloquent\UserRepository;
 
 class UserService 
 {
