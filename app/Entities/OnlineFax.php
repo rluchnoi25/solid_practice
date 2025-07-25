@@ -2,12 +2,10 @@
 
 namespace App\Entities;
 
-use Error;
-
 class OnlineFax extends Fax
 {
-    public function print()
+    public function process()
     {
-        throw new Error("Online fax can't print!");
+        return 'Sending document via email';
     }
 }
